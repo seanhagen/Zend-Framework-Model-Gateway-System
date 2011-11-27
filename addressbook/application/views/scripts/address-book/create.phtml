@@ -1,0 +1,97 @@
+<div id="create">
+  <form id="create_contact" method="POST" action="<?=$this->url()?>">
+    <fieldset>
+      <legend>Create Contact</legend>
+      
+      <div class="info">
+	<p>Fields marked with an astrisk(*) are required.</p>
+      </div>
+
+      <ul>
+	<li>
+	  <label for="title">Title</label>
+	  <input type="text" id="title" <? if ( in_array('title',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[title]" value='<?=$this->contact->title?>' />
+	</li>
+
+	<li>
+	  <label for="first_name">First Name <span>*</span></label>
+	  <input type="text" id="first_name" <? if ( in_array('first_name',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[first_name]" value='<?=$this->contact->first_name?>' />
+	</li>
+
+	<li>
+	  <label for="middle_name">Middle Name</label>
+	  <input type="text" id="middle_name" <? if ( in_array('middle_name',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[middle_name]" value='<?=$this->contact->middle_name?>' />
+	</li>
+
+	<li>
+	  <label for="last_name">Last Name <span>*</span></label>
+	  <input type="text" id="last_name" <? if ( in_array('last_name',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[last_name]" value='<?=$this->contact->last_name?>' />
+	</li>
+	
+	<li>
+	  <label for="email">Email <span>*</span></label>
+	  <input type="email" id="email" <? if ( in_array('email',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[email]" value='<?=$this->contact->email?>' />
+	</li>
+
+	<li>
+	  <label for="phone">Phone</label>
+	  <input type="text" id="phone" maxlength="25" <? if ( in_array('phone',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[phone]" value='<?=$this->contact->phone?>' />
+	</li>
+
+	<li>
+	  <label for="address_1">Address 1</label>
+	  <input type="text" id="address_1" <? if ( in_array('address_1',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[address_1]" value='<?=$this->contact->address_1?>' />
+	</li>
+
+	<li>
+	  <label for="address_2">Address 2</label>
+	  <input type="text" id="address_2" <? if ( in_array('addres_2',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[address_2]" value='<?=$this->contact->address_2?>' />
+	</li>
+
+	<li>
+	  <label for="city">City</label>
+	  <input type="text" id="city" <? if ( in_array('city',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[city]" value='<?=$this->contact->city?>' />
+	</li>
+
+	<li>
+	  <label for="state">State</label>
+	  <input type="text" id="state" <? if ( in_array('state',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[state]" value='<?=$this->contact->state?>' />
+	</li>
+
+	<li>
+	  <label for="postal_code">Postal Code</label>
+	  <input type="text" id="postal_code" <? if ( in_array('postal_code',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[postal_code]" value='<?=$this->contact->postal_code?>' />
+	</li>
+
+	<li>
+	  <label for="country">Country</label>
+	  <input type="text" id="country" <? if ( in_array('country',$this->error_fields) ): ?>class="field_error"<? endif ?>
+		 placeholder="" name="contact[country]" value='<?=$this->contact->country?>' />
+	</li>
+
+	<li>
+	  <label for="notes">Notes</label>
+	  <textarea name="contact[notes]" <? if ( in_array('notes',$this->error_fields) ): ?>class="field_error"<? endif ?>><?=$this->contact->notes?></textarea>
+	</li>
+
+	<li>
+	  <button name="submit" class="button positive right">
+	    <img src="/css/blueprint/plugins/buttons/icons/tick.png"> Submit
+	  </button>
+	</li>
+
+      </ul>
+    </fieldset>
+  </form>
+</div>

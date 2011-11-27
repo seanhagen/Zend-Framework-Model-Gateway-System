@@ -1,0 +1,44 @@
+<?php echo $this->doctype() ?>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <?= $this->headScript() ?>
+    <?= $this->headLink() ?>
+
+    <title>Address Book!</title>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="span-24">
+	<h1 class="header_text">
+	  <a href="<?=$this->url(array('action'=>'index','controller'=>'address-book','module'=>'default'),'default',true)?>">Address Book!</a>
+	</h1>
+
+	<? if ( AB_Auth::getInstance()->active ): ?>
+	<div id="userbox" class="right">
+	  <p>Welcome back, <strong><?= AB_Auth::getInstance()->data['User']['username'] ?></strong></p>
+	  <p>You have <?= $this->getContactCount() ?> contacts.</p>
+	  <p><a href="/logout">Logout</a></p>
+	</div>
+	<? endif ?>
+      </div>
+
+      <div class="span-15 append-5 prepend-4">
+	<? if ($this->success_msg): ?>
+	<div class="success"><?=$this->success_msg?></div>
+	<? endif ?>
+
+	<? if ($this->error_msg): ?>
+	<div class="error"><?=$this->error_msg?></div>
+	<? endif ?>
+
+	<?php echo $this->layout()->content; ?>
+      </div>
+
+      <div class="span-24">
+	<p>Not copyright at all.</p>
+      </div>
+    </div>
+  </body>
+</html>

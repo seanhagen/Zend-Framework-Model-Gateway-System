@@ -1,0 +1,23 @@
+<div id="contact_header">
+  <h2>Contacts</h2>
+  <a href="<?=$this->url(array('action'=>'create','controller'=>'address-book','module'=>'default'),'createContact',true)?>">New Contact</a>
+</div>
+
+<div id="contact_container">
+  <ul id="letter_list">
+    <li>Jump To:</li>
+    <? foreach ( $this->letters as $letter ): ?>
+    <li><a href="#<?=$letter['letter']?>"><?= $letter['letter'] ?></a></a>
+    <? endforeach ?>
+  </ul>
+
+  <ul id="contact_list">
+    <? foreach ( $this->contacts as $contact ): ?>
+    <li>
+      <a href="<?=$this->url(array('action'=>'view','controller'=>'address-book','module'=>'default','id'=>$contact->id),'viewContacts',true)?>">
+	<?= $contact->last_name ?>, <?= $contact->first_name ?>
+      </a>
+    </li>
+    <? endforeach ?>
+  </ul>
+</div>

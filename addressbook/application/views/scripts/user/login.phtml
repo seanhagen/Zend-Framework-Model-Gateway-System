@@ -1,0 +1,40 @@
+<div id="login">
+  <form id="login_form" method="POST" action="<?=$this->url()?>">
+    <fieldset>
+      <legend>Login</legend>
+      <ul>
+	<li>
+	  <label for="username">Username:</label>
+	  <input type="text" placeholder="Enter your username" name="username" value="<?=$this->login_username?>"/>
+	</li>
+
+	<li>
+	  <label for="password">Password:</label>
+	  <input type="password" placeholder="Enter your password" name="password" />
+	</li>
+
+	<li>
+	  <button name="submit" class="button positive right">
+	    <img src="/css/blueprint/plugins/buttons/icons/tick.png"> Submit
+	  </button>
+	</li>
+      </ul>
+    </fieldset>
+  </form>
+</div>
+
+<div id="users">
+  <h3>Example Users</h3>
+  <p>Use either one of these usernames to login and test this application</p>
+
+  <ul class="user_info">
+    <li><span>Username:</span> bobdole</li>
+    <li><span>Password:</span> testing</li>
+  </ul>
+
+  <ul class="user_info">
+    <li><span>Username:</span> johndoe</li>
+    <li><span>Password:</span> 123test</li>
+  </ul>
+
+</div>

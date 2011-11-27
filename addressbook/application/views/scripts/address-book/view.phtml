@@ -1,0 +1,38 @@
+<div id="contact_header">
+  <h2><?=$this->contact->title?> <?=$this->contact->first_name?> <?=$this->contact->middle_name?> <?=$this->contact->last_name?></h2>
+  <a href="<?=$this->url(array('action'=>'edit','controller'=>'address-book','module'=>'default','id'=>$this->contact->id),'editContact',true)?>">Edit</a>
+  <a href="<?=$this->url(array('action'=>'delete','controller'=>'address-book','module'=>'default','id'=>$this->contact->id),'deleteContact',true)?>">Delete</a>
+</div>
+
+<div id="contact_info">
+  <ul>
+    <li><strong>Email:</strong> <?=$this->contact->email?></li>
+    <? if ( !empty($this->contact->phone) ): ?>
+    <li><strong>Phone:</strong> <?=$this->contact->phone?></li>
+    <? endif ?>
+    <? if ( !empty($this->contact->address_1) ): ?>
+    <li><strong>Address 1:</strong> <?=$this->contact->address_1?></li>
+    <? endif ?>
+    <? if ( !empty($this->contact->address_2) ): ?>
+    <li><strong>Address 2:</strong> <?=$this->contact->address_2?></li>
+    <? endif ?>
+    <? if ( !empty($this->contact->city) ): ?>
+    <li><strong>City:</strong> <?=$this->contact->city?></li>
+    <? endif ?>
+    <? if ( !empty($this->contact->state) ): ?>
+    <li><strong>State:</strong> <?=$this->contact->state?></li>
+    <? endif ?>
+    <? if ( !empty($this->contact->poastal_code) ): ?>
+    <li><strong>Postal Code: <?=$this->contact->postal_code?></li>
+    <? endif ?>
+    <? if ( !empty($this->contact->country) ): ?>
+    <li><strong>Country:</strong> <?=$this->contact->country?></li>
+    <? endif ?>
+    <? if ( !empty($this->contact->notes) ): ?>
+    <li>
+      <strong>Notes:</strong> 
+      <p><?=nl2br($this->contact->notes)?></p>
+    </li>
+    <? endif ?>
+  </ul>
+</div>

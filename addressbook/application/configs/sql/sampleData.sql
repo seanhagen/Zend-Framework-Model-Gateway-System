@@ -1,0 +1,7 @@
+LOCK TABLES `users` WRITE;
+INSERT INTO `users` VALUES 
+       (1,'bobdole','ae2b1fca515949e5d54fb22b8ed95575',10,1,'2011-05-05 21:30:40','2011-05-05 21:30:40',10),
+       (2,'johndoe','abe45d28281cfa2a4201c9b90a143095',10,1,'2011-05-05 21:30:40','2011-05-05 21:30:40',10);
+UNLOCK TABLES;
+
+

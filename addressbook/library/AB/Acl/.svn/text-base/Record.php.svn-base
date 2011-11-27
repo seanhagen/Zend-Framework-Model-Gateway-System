@@ -1,0 +1,6 @@
+<?php
+
+class Z2h_Acl_Record extends Z2h_Model_Abstract
+{
+
+}
