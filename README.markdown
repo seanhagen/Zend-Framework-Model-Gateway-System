@@ -12,19 +12,20 @@ Using the Model-Gateway system makes finding, displaying, updating, and deleting
 A very basic gateway for interfacing with the 'contacts' table would look like so:
 
 ContactGateway.php:
-    class ContactGateway extends BaseGateway {
-    
-      protected $_name = "contacts";
 
-    }
+	class ContactGateway extends BaseGateway {
+	      protected $_name = "contacts";
+	}
 
 And that's it! Along with the Gateway, you'd also need a Model like so:
 
 Contact.php
-    class Contact extends AB_Model_Abstract {
-    }
+
+	class Contact extends AB_Model_Abstract {
+	}
 
 Now, assuming the database table has the following fields:
+
      id: int auto increment
      user_id: int
      title: varchar
